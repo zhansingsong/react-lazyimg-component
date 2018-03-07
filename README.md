@@ -1,8 +1,8 @@
 # react-lazyimg-component
 
-**react-lazyimg-component** 一个基于[jquery.lazyload](https://github.com/tuupola/jquery_lazyload)，结合react组件概念完成的图片懒加载小插件。支持全局配置，config 配置，个性定制等特性，还支持 [velocity.js](https://github.com/julianshapiro/velocity)、[animate.css](https://github.com/daneden/animate.css)动画库配置。用法上做到了尽量与jquery.lazyload保持一致，如果你之前用过jquery.lazyload完全无学习成本过渡，直接上手~~~~~
+**react-lazyimg-component** 一个基于[jquery.lazyload](https://github.com/tuupola/jquery_lazyload)，结合 react 组件概念完成的图片懒加载小插件。支持全局配置，config 配置，个性定制等特性，还支持 [velocity.js](https://github.com/julianshapiro/velocity)、[animate.css](https://github.com/daneden/animate.css)动画库配置。用法上做到了尽量与 jquery.lazyload 保持一致，如果你之前用过 jquery.lazyload 完全无学习成本过渡，直接上手~~~~~
 
-## :bell: DEMOS展示入口
+## :bell: DEMOS 展示入口 :flags:
 
 [:point_right: 猛击这里吧 :soon:](http://zhansingsong.github.io/lazyimg/)
 
@@ -14,8 +14,6 @@
 * 支持全局配置，分组配置及个性定制
 * 支持动画效果作用于父级元素
 * 支持响应式图片( picture / srcset )
-
-
 
 ## 安装
 
@@ -36,9 +34,7 @@ import Lazyimg, { withLazyimg } from 'react-lazyimg-component';
 // 调用
 <Lazyimg
   className="lazy"
-  src={
-    'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'
-  }
+  src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
 />;
 ```
 
@@ -59,9 +55,7 @@ const Lazy = withLazyimg(config);
 // 调用
 <Lazy
   className="lazy"
-  src={
-    'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'
-  }
+  src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
 />;
 ```
 
@@ -75,14 +69,11 @@ import Lazyimg, { withLazyimg } from 'react-lazyimg-component';
   className="lazy"
   threshold={100} // 指定触发阈值
   js_effect="transition.fadeIn" // 支持 velocity.js 动画效果
-  src={
-    'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'
-  }
+  src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
 />;
 ```
 
 > 优先级： 个性定制 > config 配置 > 默认配置
-
 
 ## API
 
