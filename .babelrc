@@ -1,0 +1,8 @@
+{
+  "presets": ["react-app"],
+  "env": {
+    "production": {
+      "plugins": ["remove-comments",["transform-remove-console", {"exclude": ["error", "warn"]}]]
+    }
+  }
+}

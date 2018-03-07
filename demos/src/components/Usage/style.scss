@@ -1,0 +1,10 @@
+@import '../../styles/mixins';
+@import '../../styles/helper';
+.usage{
+background-color: #f2fcff;
+    .usage-wp{
+      font-size: p2m(16);
+      @extend %u-center;
+      padding: p2m(20);
+    }
+}

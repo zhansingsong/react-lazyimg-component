@@ -1,0 +1,111 @@
+@function p2m($values) {
+  $baseline: 100 / 1rem * 1;
+  @if type-of($values)=="number" {
+    @if abs($values) < 4 {
+      @if $values ==0{
+        @return 0;
+      }
+      @if $values < 0 {
+        @return -0.03rem;
+      }
+      @else {
+        @return 0.03rem;
+      }
+    }
+    @else {
+      @return ($values / $baseline);
+    }
+  }
+  @else {
+    $results: ();
+    @each $value in $values {
+      @if $value==0 or type-of($value)=="number" {
+        $results: append($results, p2m($value));
+      }
+    }
+    @return $results;
+  }
+}
+
+@mixin font-dpr($font-size) {
+  font-size: $font-size;
+  [data-dpr="2"] & {
+    font-size: $font-size * 2;
+  }
+  [data-dpr="3"] & {
+    font-size: $font-size * 3;
+  }
+}
+
+@mixin transition($property, $duration: 0.5s) {
+  -moz-transition: $property $duration;
+  -webkit-transition: $property $duration;
+  -o-transition: $property $duration;
+  transition: $property $duration;
+}
+
+%flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+%flex-nowrap {
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -webkit-box-direction: normal;
+  -moz-box-lines: single;
+  -webkit-box-lines: single;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+
+%flex-wrap {
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -moz-box-direction: normal;
+  -webkit-box-direction: normal;
+  -moz-box-lines: multiple;
+  -webkit-box-lines: multiple;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+@mixin flex-flex($num) {
+  -moz-box-flex: $num;
+  -webkit-box-flex: $num;
+  -ms-flex: $num;
+  -webkit-flex: $num;
+  flex: $num;
+}
+
+@mixin flex-order($num) {
+  -moz-box-ordinal-group: $num;
+  -webkit-box-ordinal-group: $num;
+  -ms-flex-order: $num;
+  -webkit-flex-order: $num;
+  order: $num;
+}
+
+@mixin flex-pack($pack) {
+  -moz-box-pack: $pack;
+  -webkit-box-pack: $pack;
+  -ms-flex-pack: $pack;
+}
+
+%flex-justify {
+  @include flex-pack(justify);
+  -justify-content: space-between;
+  justify-content: space-between;
+}
+
+%flex-center {
+  @include flex-pack(center);
+  -justify-content: center;
+  justify-content: center;
+}

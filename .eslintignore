@@ -1,0 +1,5 @@
+node_modules/
+coverage
+demos
+lib
+__tests__
