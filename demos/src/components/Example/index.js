@@ -39,7 +39,7 @@ class Example extends Component {
   // 调用
   <Lazyimg 
     className="lazy"
-    src={'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'}
+    src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
   />
             `}
           </Prism>
@@ -67,7 +67,7 @@ class Example extends Component {
   // 调用
   <Lazy
     className="lazy"
-    src={'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'}
+    src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
   />;
             `}
           </Prism>
@@ -91,7 +91,7 @@ class Example extends Component {
   <Lazy
     className="lazy"
     js_effect="transition.flipXIn" // 定制不同的动画效果
-    src={'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'}
+    src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
   />;
             `}
           </Prism>
@@ -136,7 +136,7 @@ class Example extends Component {
   // 调用
   <Lazy
     className="lazy"
-    src={'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'}
+    src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
   />;
             `}
           </Prism>
@@ -184,7 +184,7 @@ class Example extends Component {
   // 调用
   <Lazy
     className="lazy"
-    src={'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'}
+    src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
   />;
             `}
           </Prism>
@@ -231,7 +231,7 @@ class Example extends Component {
   // 调用
   <Lazyimg
     className="lazy"
-    src={'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'}
+    src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
     load={(el)=>{ // 自定义动画效果
       window.Velocity(el, 'transition.whirlIn', {
         duration: 600,
@@ -264,7 +264,7 @@ class Example extends Component {
     <div className="example-img">
       <Lazyimg
         className="lazy"
-        src={'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'}
+        src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
         css_effect={['animated', 'flipInY']} // 定制 css 动画效果
         parent=".example-wp" // 指定父级元素选择器，也可以指定父级层级level：2
       />
@@ -337,7 +337,7 @@ class Example extends Component {
   // 调用
   <Lazy
     className="lazy"
-    src={'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'}
+    src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
   />
             `}
           </Prism>
@@ -363,7 +363,7 @@ class Example extends Component {
   // dpr
   <Lazyimg
     className="lazy"
-    src={'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'}
+    src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
     srcSet="source_1x.png 1x, source_2x.png 2x, source_3x.png 3x, source_3.5x.png 3.5x"
     js_effect="transition.bounceIn"
   />
@@ -389,7 +389,7 @@ class Example extends Component {
 // media-query、srcSet、sizes
   <Lazyimg
     className="lazy"
-    src={'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'}
+    src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
     srcSet="source_360.png 360w, source_640.png 640w, source_980.png 980w, source_1290.png 1290w"
     sizes="(min-width: 370px) 100vw, (min-width: 640px) 75vw,(max-width: 980px) 50vw, 360"
     js_effect="transition.bounceIn"
@@ -418,7 +418,7 @@ class Example extends Component {
       <source media="(min-width: 465px)" srcSet="https://www.w3schools.com/tags/img_white_flower.jpg"/>
       <Lazyimg
       className="lazy"
-      src={'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'}
+      src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
       js_effect="transition.expandIn"
     />
   </picture>

@@ -27,7 +27,7 @@ class Usage extends Component {
   // 调用
   <Lazyimg 
     className="lazy"
-    src={'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'}
+    src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
   />
             `}
             </Prism>

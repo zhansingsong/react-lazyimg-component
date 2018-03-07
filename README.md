@@ -37,7 +37,7 @@ import Lazyimg, { withLazyimg } from 'react-lazyimg-component';
 <Lazyimg
   className="lazy"
   src={
-    'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'
+    'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'
   }
 />;
 ```
@@ -60,7 +60,7 @@ const Lazy = withLazyimg(config);
 <Lazy
   className="lazy"
   src={
-    'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'
+    'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'
   }
 />;
 ```
@@ -76,7 +76,7 @@ import Lazyimg, { withLazyimg } from 'react-lazyimg-component';
   threshold={100} // 指定触发阈值
   js_effect="transition.fadeIn" // 支持 velocity.js 动画效果
   src={
-    'https://i.pinimg.com/564x/8c/98/8f/8c988f59d31141b09e251d4675923813.jpg'
+    'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'
   }
 />;
 ```
