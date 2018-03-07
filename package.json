@@ -75,6 +75,7 @@
     "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
-    "prop-types": "^15.6.1"
+    "prop-types": "^15.6.1",
+    "react-lazy-component": "^1.2.1"
   }
 }
