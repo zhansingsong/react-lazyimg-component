@@ -4,7 +4,9 @@
 
 ## :bell: Demos 展示入口 :flags:
 
-### [:point_right: 猛击这里吧 :soon:](http://zhansingsong.github.io/lazyimg/)
+### PC 预览：
+
+[:point_right: 猛击这里吧 :soon:](http://zhansingsong.github.io/lazyimg/)
 
 ### 手机预览(扫一扫)：
 
