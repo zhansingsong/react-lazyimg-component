@@ -12,9 +12,9 @@ class Usage extends Component {
             <Prism className="language-javascript">
               {`
   // npm
-  $> npm install react-lazyimg
+  $> npm install react-lazyimg-component
   // yarn
-  $> yarn add react-lazyimg
+  $> yarn add react-lazyimg-component
             `}
             </Prism>
           </div>
@@ -22,8 +22,8 @@ class Usage extends Component {
           <div className="usage-cnt">
             <Prism className="language-javascript">
               {`
-  // 引入 react-lazyimg
-  import Lazyimg from 'react-lazyimg';
+  // 引入 react-lazyimg-component
+  import Lazyimg from 'react-lazyimg-component';
   // 调用
   <Lazyimg 
     className="lazy"

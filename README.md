@@ -1,6 +1,6 @@
-# react-lazyimg
+# react-lazyimg-component
 
-**react-lazyimg** 一个基于jquery.lazyload，结合react组件概念完成的图片懒加载小插件。支持全局配置，config 配置，个性定制等特性，还支持 animate.css和velocity.js动画库配置。用法上做到了尽量与jquery.lazyload保持一致，如果你之前用过jquery.lazyload完全无学习成本过渡，直接上手~~~~~
+**react-lazyimg-component** 一个基于jquery.lazyload，结合react组件概念完成的图片懒加载小插件。支持全局配置，config 配置，个性定制等特性，还支持 animate.css和velocity.js动画库配置。用法上做到了尽量与jquery.lazyload保持一致，如果你之前用过jquery.lazyload完全无学习成本过渡，直接上手~~~~~
 
 ## :bell: DEMOS展示入口
 
@@ -57,9 +57,9 @@ placeholder: // 占位元素，除了支持普通的图片外，还支持react�
 
 ```bash
 // npm
-$> npm install react-lazyimg
+$> npm install react-lazyimg-component
 // yarn
-$> yarn add react-lazyimg
+$> yarn add react-lazyimg-component
 ```
 
 ## 使用
@@ -68,7 +68,7 @@ $> yarn add react-lazyimg
 
 ```js
 // 引入 lazyimg
-import Lazyimg, { withLazyimg } from 'react-lazyimg';
+import Lazyimg, { withLazyimg } from 'react-lazyimg-component';
 // 调用
 <Lazyimg
   className="lazy"
@@ -82,7 +82,7 @@ import Lazyimg, { withLazyimg } from 'react-lazyimg';
 
 ```js
 // 引入 lazyimg
-import Lazyimg, { withLazyimg } from 'react-lazyimg';
+import Lazyimg, { withLazyimg } from 'react-lazyimg-component';
 // 引入 volecity.js
 import 'velocity-animate';
 import 'velocity-animate/velocity.ui';
@@ -105,7 +105,7 @@ const Lazy = withLazyimg(config);
 
 ```js
 // 引入 lazyimg
-import Lazyimg, { withLazyimg } from 'react-lazyimg';
+import Lazyimg, { withLazyimg } from 'react-lazyimg-component';
 // 调用
 <Lazyimg
   className="lazy"

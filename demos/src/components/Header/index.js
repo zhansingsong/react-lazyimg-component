@@ -8,7 +8,7 @@ class Header extends Component {
         <div className="header-wp">
           <h1 className="header-tt">
             <i className="c1">react-</i>
-            <i className="c2">lazyimg</i>
+            <i className="c2">lazyimg-component</i>
           </h1>
           <p className="header-desc">
             一个基于<a className="link link-a" href="https://github.com/tuupola/jquery_lazyload" target="blank">jquery.lazyload</a>，结合<a href="https://github.com/facebook/react/" target="blank" className="link link-a">react</a>组件概念完成的图片懒加载小插件。支持全局配置，config 配置，个性定制等特性，还支持<a

@@ -54,7 +54,7 @@ class Example extends Component {
           <Prism>
             {`
   // 引入 lazyimg
-  import Lazyimg, { withLazyimg } from 'react-lazyimg';
+  import Lazyimg, { withLazyimg } from 'react-lazyimg-component';
   // 引入 volecity.js
   import 'velocity-animate';
   import 'velocity-animate/velocity.ui';
@@ -124,7 +124,7 @@ class Example extends Component {
           <Prism>
             {`
   // 引入 lazyimg
-  import Lazyimg, { withLazyimg } from 'react-lazyimg';
+  import Lazyimg, { withLazyimg } from 'react-lazyimg-component';
   // 引入 volecity.js。如果没有安装需要先安装：npm install velocity-animate
   import 'velocity-animate';
   import 'velocity-animate/velocity.ui';
@@ -221,7 +221,7 @@ class Example extends Component {
             </a>都不满足你的需求。可以基于load配置项自定义动画效果。另外，确保不要指定<strong className="strong">
               js-effect
             </strong>和<strong className="strong">css-effect</strong>。因为<strong className="strong">
-              react-lazyimg
+              react-lazyimg-component
             </strong>也会触发<strong className="strong">js-effect</strong>和<strong className="strong">
               css-effect
             </strong>动画效果。
@@ -301,7 +301,7 @@ class Example extends Component {
             </a>都不满足你的需求。可以基于load配置项自定义动画效果。另外，确保不要指定<strong className="strong">
               js-effect
             </strong>和<strong className="strong">css-effect</strong>。因为<strong className="strong">
-              react-lazyimg
+              react-lazyimg-component
             </strong>也会触发<strong className="strong">js-effect</strong>和<strong className="strong">
               css-effect
             </strong>动画效果。
