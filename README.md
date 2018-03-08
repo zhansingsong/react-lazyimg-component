@@ -126,5 +126,6 @@ placeholder: // 占位元素，除了支持普通的图片外，还支持react�
 * [x] 支持动画库的配置
 * [x] 增加 demos 展示页面
 * [ ] 支持 IntersectionObserver 检查 visibility，优化检测元素可见性的机制。
+* [ ] 增加英文文档
 * [x] 增加 test 用例
 * [x] 发布到 npm 和 yarn
