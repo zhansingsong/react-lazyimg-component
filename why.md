@@ -27,7 +27,7 @@
 ### 1. 小巧轻便，简单易用，基本无学习成本
 
 
-![jq](./images/jq.png)
+![jq](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/jq.png)
 
 在那个 jQuery 一统天下年代，撸代码就用 jQuery 一把梭。其中
 jQuery.lazyload 是一个很受欢迎的插件。 可能很多像我一样的小伙伴们，已习惯了 jQuery.lazyload 使用。 于是自己就琢磨能否能继承 jQuery.lazyload 使用方法同时保持 react 特有组件特性。
@@ -138,7 +138,7 @@ const Lazy = withLazyimg(config);
 
 直接上效果了 😝
 
-![](./images/js-effect.gif)
+![](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/js-effect.gif)
 
 * 指定 **css-effect** 配置项来配置 **animate.css** 动画效果
 
@@ -160,7 +160,7 @@ const Lazy = withLazyimg(config);
 
 直接上效果了 😝
 
-![](./images/css-effect.gif)
+![](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/css-effect.gif)
 
 * 指定 **parent** 配置项指定父级元素动画效果
 
@@ -183,7 +183,7 @@ const Lazy = withLazyimg(config);
 
 直接上效果了 😝
 
-![](./images/parent.gif)
+![](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/parent.gif)
 
 ### 3. react 组件式 placeholder
 
@@ -230,13 +230,13 @@ const Lazy = withLazyimg({
 
 直接上效果了 😝
 
-![](./images/placeholder.gif)
+![](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/placeholder.gif)
 
 > singsong: 图中小火焰有木有很耀眼~~~~~
 
 接着咋们来看看组件式 placeholder 应用场景案例，直接上效果了 😝
 
-![](./images/demo.gif)
+![](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/demo.gif)
 
 上图是分类页通过定制显示文案的 placeholder 组件来代替普通的灰色图片，效果是不是还不错😝。这是我在实际项目中使用的案例。这里小伙伴可以自由发挥哈~~~~~。如果你有不错 idea 可以@我哈，先谢了！
 
@@ -258,7 +258,7 @@ const Lazy = withLazyimg({
 
 直接上效果了 😝
 
-![](./images/srcset.gif)
+![](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/srcset.gif)
 
 > singsong: 这里 srcset 配合 sizes 特性可以实现更好的效果
 
@@ -278,7 +278,7 @@ const Lazy = withLazyimg({
 
 直接上效果了 😝
 
-![](./images/picture.gif)
+![](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/picture.gif)
 
 
 ## 后语
