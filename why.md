@@ -1,12 +1,12 @@
 # 为什么我要写这个 react 插件
 
-图片懒加载是项目中常用的功能，然而现有 react 懒加载组件库，都不是很满意（用着不是很爽了 😝）。概括一下有如下几点：
+图片懒加载是项目中常用的功能，然而现有 react 懒加载组件库，用着不是很爽了 😝。概括一下有如下几点：
 
-* 没有只针对 image 懒加载组件。多数组件库都内置了模块、组件、脚本、iframe 懒加载功能，而弱化了 image 懒加载功能
-* 不支持动画显示效果
-* 不灵活，可配置度不高
-* placeholder 不能组件化
-* 不支持响应式图片( picture / srcset )
+* 没有只针对 image 懒加载组件。多数组件库都内置了模块、组件、脚本、iframe 懒加载功能，而弱化了 image 懒加载功能。
+* 不支持动画显示效果。
+* 不灵活，可配置度不高。
+* placeholder 不能组件化。
+* 不支持响应式图片( picture / srcset )。
 
 ## [react-lazyimg-component](https://github.com/zhansingsong/react-lazyimg-component)
 
@@ -26,15 +26,14 @@
 
 ### 1. 小巧轻便，简单易用，基本无学习成本
 
-
 ![jq](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/jq.png)
 
 在那个 jQuery 一统天下年代，撸代码就用 jQuery 一把梭。其中
-jQuery.lazyload 是一个很受欢迎的插件。 可能很多像我一样的小伙伴们，已习惯了 jQuery.lazyload 使用。 于是自己就琢磨能否能继承 jQuery.lazyload 使用方法同时保持 react 特有组件特性。
+jQuery.lazyload 是一个很常用图片懒加载插件。 可能很多像我一样的小伙伴们，懒加载就直接上 jQuery.lazyload，早已习惯了 jQuery.lazyload 使用。 于是自己就琢磨能否继承 jQuery.lazyload 使用方法同时保持 react 特有组件特性。
 
 > singsong: 这里只是继承了 jQuery.lazyload 配置特性，不是完全继承。毕竟 jQuery 与现在主流的 MVVM 框架思想截然不同。
 
-如果小伙伴们熟悉 jQuery.lazyload ， 完全没有学习成本直接上手哈。 只说不是写，然并卵。那我们来看看它到底好用不好用：
+如果小伙伴们熟悉 jQuery.lazyload ， 完全没有学习成本直接上手 **react-lazyimg-component** 哈。 只说不是写，然并卵。那我们来看看它到底好用不：
 
 #### 安装
 
@@ -115,7 +114,7 @@ placeholder: // 占位元素，除了支持普通的图片外，还支持react�
 
 * 指定 **js-effect** 配置项来配置 **velocity.js** 动画效果
 
->注意：js-effect依赖于velocity.js。需要确保velocity.js已加载。
+> 注意：js-effect 依赖于 velocity.js。需要确保 velocity.js 已加载。
 
 ```js
 // 引入 lazyimg
@@ -187,7 +186,7 @@ const Lazy = withLazyimg(config);
 
 ### 3. react 组件式 placeholder
 
-> singsong: 传统的 placeholder 通常都是由图片来代替，为什么不能用组件来定制，这样可扩展性更高。完全可以摆脱设计师束缚，咱们开发完全可以自由发挥嘛! 想想有木有有点小鸡冻 😝~~~~~~
+> singsong: 传统的 placeholder 通常都是由图片来代替，为什么不能用组件来定制，这样可扩展性更高。完全可以摆脱设计师束缚，咱们开发可以自由发挥😯! 想想有木有有点小鸡冻 😝~~~~~~
 
 * 先定义 placeholder 组件
 
@@ -213,7 +212,7 @@ export default props => {
 };
 ```
 
-* 指定 placeholder 配置项为刚定义 placeholder 组件
+* 指定 placeholder 配置项为上述定义的 placeholder 组件
 
 ```js
 // 配置
@@ -238,7 +237,7 @@ const Lazy = withLazyimg({
 
 ![](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/demo.gif)
 
-上图是分类页通过定制显示文案的 placeholder 组件来代替普通的灰色图片，效果是不是还不错😝。这是我在实际项目中使用的案例。这里小伙伴可以自由发挥哈~~~~~。如果你有不错 idea 可以@我哈，先谢了！
+上图是分类页通过定制显示文案的 placeholder 组件来代替普通的灰色图片，效果是不是看着还行 😝。这是我在实际项目中使用的案例。这里小伙伴可以自由发挥哈~~~~~。如果你有不错 idea 可以@我哈，先谢了！
 
 ### 4. 响应式图片( picture / srcset )
 
@@ -280,7 +279,6 @@ const Lazy = withLazyimg({
 
 ![](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/picture.gif)
 
-
 ## 后语
 
-这个插件是我由项目中提炼出的，个人用着还挺顺手，就拿出与大家分享分享。另外，毕竟个人能力有限，如果你发现插件有问题或有什么好的建议，也请告知一下，先这里谢过了😝。
+这个插件是我由项目中提炼出的，个人用着还挺顺手，就拿出与大家分享分享。另外，毕竟个人能力有限，如果你发现插件有问题或有什么好的建议，也请告知一下，先这里谢过了 😝。
