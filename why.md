@@ -187,7 +187,7 @@ const Lazy = withLazyimg(config);
 
 ### 3. react 组件式 placeholder
 
-> singsong: 传统的 placeholder 通常都是由图片来代替，为什么不能用组件来定制，这样可扩展性更高。完全可以摆脱设计师束缚，咱们开发完全可以自由发挥嘛~想想有木有有点小鸡冻 😝~~
+> singsong: 传统的 placeholder 通常都是由图片来代替，为什么不能用组件来定制，这样可扩展性更高。完全可以摆脱设计师束缚，咱们开发完全可以自由发挥嘛~想想有木有有点小鸡冻 😝~
 
 * 先定义 placeholder 组件
 
