@@ -6,8 +6,8 @@ import Example from '../Example';
 class App extends Component {
   render(){
     return (<div className='app'>
-      <Header></Header>
-      <Usage></Usage>
+      {/* <Header></Header> */}
+      {/* <Usage></Usage> */}
       <Example></Example>
     </div>);
   }

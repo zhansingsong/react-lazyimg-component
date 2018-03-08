@@ -285,26 +285,7 @@ class Example extends Component {
             />
           </div>
           <I className="i">
-            提示：如果<a
-              className="link"
-              href="https://github.com/daneden/animate.css"
-              target="blank"
-            >
-              {' '}
-              animate.css
-            </a>和<a
-              className="link"
-              href="https://github.com/julianshapiro/velocity"
-              target="blank"
-            >
-              velocity.js
-            </a>都不满足你的需求。可以基于load配置项自定义动画效果。另外，确保不要指定<strong className="strong">
-              js-effect
-            </strong>和<strong className="strong">css-effect</strong>。因为<strong className="strong">
-              react-lazyimg-component
-            </strong>也会触发<strong className="strong">js-effect</strong>和<strong className="strong">
-              css-effect
-            </strong>动画效果。
+            提示：如果普通的<strong className="strong">placeholder</strong>图片不能满足你，可以定制一个 react placeholder 组件哦😝
           </I>
           <Prism>
             {`

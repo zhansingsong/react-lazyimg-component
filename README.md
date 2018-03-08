@@ -2,6 +2,8 @@
 
 **react-lazyimg-component** 一个基于[jquery.lazyload](https://github.com/tuupola/jquery_lazyload)，结合 react 组件概念完成的图片懒加载小插件。支持全局配置，config 配置，个性定制等特性，还支持 [velocity.js](https://github.com/julianshapiro/velocity)、[animate.css](https://github.com/daneden/animate.css)动画库配置。用法上做到了尽量与 jquery.lazyload 保持一致，如果你之前用过 jquery.lazyload 完全无学习成本过渡，直接上手~~~~~
 
+### [为什么我要写这个插件 ----> 使劲戳吧](./why.md)
+
 ## :bell: Demos 展示入口 :flags:
 
 ### PC 预览：
@@ -118,11 +120,6 @@ placeholder: // 占位元素，除了支持普通的图片外，还支持react�
 
 * node_type: 指定 react 将生成的元素类型，默认为'img'。
 * placeholder: 占位元素，除了支持普通的图片外，还支持 react 组件。
-
-## 案例
-
-* 搜狗漫画：[http://mh.sogou.com/](http://mh.sogou.com/)
-* 搜狗优惠券：[http://mai.sogou.com/tejia/m/coupons/#/0](http://mai.sogou.com/tejia/m/coupons/#/0)
 
 ## TODO
 
