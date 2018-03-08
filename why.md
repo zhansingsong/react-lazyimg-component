@@ -26,15 +26,15 @@
 
 ### 1. 小巧轻便，简单易用，基本无学习成本
 
-
+
 ![jq](./images/jq.png)
 
 在那个 jQuery 一统天下年代，撸代码就用 jQuery 一把梭。其中
-jQuery.lazyload 是一个很受欢迎的插件。 可能很多像我一样的小伙伴们，已习惯了 jQuery.lazyload 使用。 于是自己就琢磨能否能继承 jQuery.lazyload 使用方法同时保持 react 特有组件特性。
+jQuery.lazyload 是一个很受欢迎的插件。 可能很多像我一样的小伙伴们，已习惯了 jQuery.lazyload 使用。 于是自己就琢磨能否能继承 jQuery.lazyload 使用方法同时保持 react 特有组件特性。
 
 > singsong: 这里只是继承了 jQuery.lazyload 配置特性，不是完全继承。毕竟 jQuery 与现在主流的 MVVM 框架思想截然不同。
 
-如果小伙伴们熟悉 jQuery.lazyload ， 完全没有学习成本直接上手哈。 只说不是写，然并卵。那我们来看看它到底好用不好用：
+如果小伙伴们熟悉 jQuery.lazyload ， 完全没有学习成本直接上手哈。 只说不是写，然并卵。那我们来看看它到底好用不好用：
 
 #### 安装
 
@@ -58,7 +58,7 @@ import Lazyimg, { withLazyimg } from 'react-lazyimg-component';
 />;
 ```
 
-是不是很简单，有木有 😝。上述只是使用 **react-lazyimg-component** 的默认配置。 这里我们可以通过配置项来定制懒加载的行为：
+是不是很简单，有木有 😝。上述只是使用 **react-lazyimg-component** 的默认配置。 这里我们可以通过配置项来定制懒加载的行为：
 
 ```js
 // 引入 lazyimg
@@ -238,7 +238,7 @@ const Lazy = withLazyimg({
 
 ![](./images/demo.gif)
 
-上图是分类页通过定制显示文案的 placeholder 组件来代替普通的灰色图片，效果是不是还不错~~~~😝。这是我在实际项目中使用的案例。这里小伙伴可以自由发挥哈~。如果你有不错 idea 可以@我哈，先谢了！
+上图是分类页通过定制显示文案的 placeholder 组件来代替普通的灰色图片，效果是不是还不错~😝。这是我在实际项目中使用的案例。这里小伙伴可以自由发挥哈~。如果你有不错 idea 可以@我哈，先谢了！
 
 ### 4. 响应式图片( picture / srcset )
 
