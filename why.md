@@ -1,6 +1,6 @@
 # 为什么我要写这个 react 插件
 
-图片懒加载是项目中常用的功能，然而现有 react 懒加载组件库，用着不是很爽了 😝。概括一下有如下几点：
+图片懒加载是项目中常用的功能，然而现有 react 懒加载组件库，用着都不是很爽了 😝。概括一下有如下几点：
 
 * 没有只针对 image 懒加载组件。多数组件库都内置了模块、组件、脚本、iframe 懒加载功能，而弱化了 image 懒加载功能。
 * 不支持动画显示效果。
@@ -28,8 +28,8 @@
 
 ![jq](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/jq.png)
 
-在那个 jQuery 一统天下年代，撸代码就用 jQuery 一把梭。其中
-jQuery.lazyload 是一个很常用图片懒加载插件。 可能很多像我一样的小伙伴们，懒加载就直接上 jQuery.lazyload，早已习惯了 jQuery.lazyload 使用。 于是自己就琢磨能否继承 jQuery.lazyload 使用方法同时保持 react 特有组件特性。
+在那个 jQuery 一统天下的年代，撸代码就用 jQuery 一把梭。其中
+jQuery.lazyload 是一个很常用图片懒加载插件。 可能很多像我一样的小伙伴们，懒加载就直接上 jQuery.lazyload，早已习惯了 jQuery.lazyload 使用。 于是自己就琢磨能否继承 jQuery.lazyload 使用方法同时保持 react 特有组件特性。这样可以很快上手~~~~~😝
 
 > singsong: 这里只是继承了 jQuery.lazyload 配置特性，不是完全继承。毕竟 jQuery 与现在主流的 MVVM 框架思想截然不同。
 
@@ -186,7 +186,7 @@ const Lazy = withLazyimg(config);
 
 ### 3. react 组件式 placeholder
 
-> singsong: 传统的 placeholder 通常都是由图片来代替，为什么不能用组件来定制，这样可扩展性更高。完全可以摆脱设计师束缚，咱们开发可以自由发挥😯! 想想有木有有点小鸡冻 😝~~~~~~
+> singsong: 传统的 placeholder 通常都是由图片来代替，为什么不能用组件来定制，这样可扩展性更高。完全可以摆脱设计师的束缚，咋们开发自由发挥😯! 想想有木有有点小鸡冻 😝~~~~~~
 
 * 先定义 placeholder 组件
 

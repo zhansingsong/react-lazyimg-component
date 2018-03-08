@@ -2,6 +2,7 @@
 
 **react-lazyimg-component** 一个基于[jquery.lazyload](https://github.com/tuupola/jquery_lazyload)，结合 react 组件概念完成的图片懒加载小插件。支持全局配置，config 配置，个性定制等特性，还支持 [velocity.js](https://github.com/julianshapiro/velocity)、[animate.css](https://github.com/daneden/animate.css)动画库配置。用法上做到了尽量与 jquery.lazyload 保持一致，如果你之前用过 jquery.lazyload 完全无学习成本过渡，直接上手~~~~~
 
+
 ### [为什么我要写这个插件 ----> 使劲戳吧](./why.md)
 
 ## :bell: Demos 展示入口 :flags:
@@ -22,6 +23,8 @@
 * 支持全局配置，分组配置及个性定制
 * 支持动画效果作用于父级元素
 * 支持响应式图片( picture / srcset )
+
+> 如果小伙伴们有在实际项目中使用，也请告知一下在线地址，好让其他小伙伴参考学习学习。
 
 ## 安装
 
