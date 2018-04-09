@@ -1,6 +1,6 @@
 {
   "name": "react-lazyimg-component",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a higher order react component for lazy loading image",
   "main": "lib/index.js",
   "scripts": {
