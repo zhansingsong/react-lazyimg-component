@@ -319,7 +319,8 @@ function withLazyimg(config = {}) {
               duration: 600,
               complete: el => {
                 // 重置style样式
-                el[0].style = Util.obj2Style(originalProps.style) || '';
+                // bug: https://stackoverflow.com/questions/32468352/uncaught-typeerror-cannot-set-property-style-of-htmlelement-which-has-only-a
+                el[0].setAttribute('style', Util.obj2Style(originalProps.style) || '');
               },
             });
           }
