@@ -1,0 +1,41 @@
+@import '../../styles/mixins';
+@import '../../styles/helper';
+.example{
+  background-color: #282c34;
+  font-size: p2m(16);
+  .placeholder{
+
+  }
+  .example-tt{
+    background-color: #f2fcff;
+    .example-tt-wp{
+      @extend %u-center;
+      padding: p2m(20);
+
+    }
+  }
+  .example-wp{
+    position: relative;
+    overflow: hidden;
+    @extend %u-center;
+    padding: p2m(20);
+  }
+  pre[class*='language-'] {
+    background-color: #272822;
+    padding: 0em;
+    margin: 0em 0;
+    overflow: auto;
+    border-radius: 0em;
+  }
+  .example-img{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: p2m(562.5);
+    .lazy{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

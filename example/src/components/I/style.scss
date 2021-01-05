@@ -1,0 +1,25 @@
+@import '../../styles/mixins';
+@import '../../styles/helper';
+.i{
+  position: relative;
+  background-color: #e6db74;
+  font-size: p2m(20);
+  line-height: p2m(40);
+  padding: p2m(10);
+  color: #4d4d4d;
+  border-left: p2m(8) solid #fd971f;
+  border-right: p2m(8) solid #fd971f;
+  box-sizing: border-box;
+}
+.i-desc{
+  color: #222;
+  background-color: #ecfbff;
+  border-left: p2m(8) solid #8ca4af;
+  border-right: p2m(8) solid #8ca4af;
+}
+.i-error{
+  color: #0c0c0c;
+  background-color: #ffd3d1;
+  border-left: p2m(8) solid #f92672;
+  border-right: p2m(8) solid #f92672;
+}

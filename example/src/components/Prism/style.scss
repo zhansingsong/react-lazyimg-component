@@ -1,0 +1,17 @@
+pre {
+  max-height: 30em;
+  overflow: auto;
+}
+pre > code.highlight {
+  outline: 0.4em solid red;
+  outline-offset: 0.4em;
+}
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: #292c35;
+}
+pre[class*='language-'] {
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.6em;
+}

@@ -1,0 +1,59 @@
+@import '../../styles/mixins';
+@import '../../styles/helper';
+.header{
+  background-color: #282c34;
+  color: #fff;
+  padding: p2m(20);
+  .header-wp{
+    @extend %u-center;
+  }
+  .header-tt{
+    font-size: p2m(50);
+    color:#61dafb;
+    margin-bottom: p2m(20);
+    .c1{
+      font-weight: 700;
+    }
+    .c2{
+      color:#c6f3ff;
+    }
+    .version{
+      background-color: rgba(188, 222, 251, 0.4);
+      padding: 0 0.1em;
+      margin-left: 0.2em;
+      border-radius: 0.2em;
+      text-shadow: 0 0 2px #00000061;
+      font-size: 0.3rem;
+      position: relative;
+      top: -0.3rem;
+
+    }
+
+  }
+
+  .header-desc{
+    font-size: p2m(20);
+    .tt{
+      color: #61dafb;
+      
+    }
+  }
+
+  .header-list{
+    font-size: p2m(18);
+    color: #B3E5FC;
+    padding-left: p2m(16);
+    li{
+      &::before{
+        content: "";
+        position: relative;
+        display: inline-block;
+        background-color: #46526b;
+        height: p2m(10);
+        width: p2m(10);
+        border-radius: p2m(6);
+        margin-right: p2m(16);
+      }
+    }
+  }
+}
