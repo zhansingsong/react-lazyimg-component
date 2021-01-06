@@ -1,6 +1,8 @@
 # react-lazyimg-component
 
-**react-lazyimg-component v1.0.0** 是使用 [Typescript](https://www.typescriptlang.org/)、[React Hooks](https://zh-hans.reactjs.org/docs/hooks-reference.html)、[Intersection Observer API](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API)完全重构的，React 图片懒加载小组件。并且组件参考了[React Transition Group 的 SwitchTransition](https://reactcommunity.org//switch-transition) 动画实现原理 ，引入全新的渐进性自然过渡效果。
+**react-lazyimg-component v1.0.0** 是使用 [Typescript](https://www.typescriptlang.org/)、[React Hooks](https://zh-hans.reactjs.org/docs/hooks-reference.html)、[Intersection Observer API](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API)完全重构的，React 图片懒加载小组件。并且组件参考了[React Transition Group 的 SwitchTransition](https://reactcommunity.org//switch-transition) 动画实现原理 ，引入全新的渐进性自然过渡效果（如下图 **方案 B** 所示）。
+
+![](./lazyimg.png)
 
 ### PC 预览：
 
