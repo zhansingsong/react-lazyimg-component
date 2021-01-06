@@ -8,6 +8,8 @@
 
 ![](./lazyimg.gif)
 
+> singsong: Demo 中第一张图片未使用 **渐进性自然过渡效果**，会存在跳闪现象。第二张图片使用 **渐进性自然过渡效果**。效果更加自然！😀
+
 ### PC 预览：
 
 [:point_right: 猛击这里吧 :soon:](http://zhansingsong.github.io/lazyimg/)
