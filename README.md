@@ -4,6 +4,10 @@
 
 ![](./lazyimg.png)
 
+**Demo 效果**
+
+![](./lazyimg.gif)
+
 ### PC 预览：
 
 [:point_right: 猛击这里吧 :soon:](http://zhansingsong.github.io/lazyimg/)
@@ -18,6 +22,7 @@
 - React Hooks 实现
 - Intersection Observer API 取代 scroll 事件，代码更加简洁，性能更好。并且做了兼容处理
 - 兼容服务端渲染
+- 定制默认 `props`
 - 默认开启全新的渐进性自然过渡效果
 - 小巧轻便，简单易用，基本无学习成本
 - 支持 react 组件式 placeholder
