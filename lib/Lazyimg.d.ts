@@ -6,7 +6,6 @@ export interface ILazyimgProps {
     force?: boolean;
     loaded?: (el?: HTMLElement) => void;
     end?: (el?: HTMLElement) => void;
-    isLazyimgWrapper?: boolean;
     animateType?: 'none' | 'transition' | 'animation';
     animateClassName?: string[];
     timeout?: number;
@@ -19,9 +18,11 @@ export interface ILazyimgProps {
 interface ILazyimgType extends Omit<HTMLProps<HTMLElement>, 'placeholder'>, ILazyimgProps {
     src: string;
     srcSet?: string;
+    isLazyimgWrapper?: boolean;
 }
-declare const Lazyimg: FC<ILazyimgType>;
+export declare const withLazyimg: (config?: ILazyimgProps) => FC<ILazyimgType>;
 export declare const LazyimgWrapper: FC<HTMLProps<HTMLElement> & {
     element?: string;
 }>;
-export default Lazyimg;
+declare const _default: React.FC<ILazyimgType>;
+export default _default;

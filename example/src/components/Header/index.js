@@ -39,6 +39,7 @@ class Header extends Component {
             <li>Intersection Observer API 取代 scroll 事件，代码更加简洁，性能更好。并且做了兼容处理</li>
             <li>兼容服务端渲染</li>
             <li>默认开启全新的渐进性自然过渡效果</li>
+            <li>定制默认 "props"</li>
             <li>小巧轻便，简单易用，基本无学习成本</li>
             <li>支持 react 组件式 placeholder</li>
             <li>支持动画效果作用于父级元素</li>

@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import './style.scss';
 import Prism from '../Prism';
-import Lazyimg, { LazyimgWrapper } from '../../../../lib/Lazyimg';
+import Lazyimg, { LazyimgWrapper, withLazyimg } from '../../../../lib/Lazyimg';
 import { getImg, getRImg } from '../../utils';
 import Title from '../Title';
 import Placeholder from '../Placeholder';
+import Loading from '../../img/loading.svg';
 import I from '../I';
-// const Lazy1 = withLazyimg({
-//   js_effect: 'transition.fadeIn',
-//   placeholder: <Placeholder img={require('../../img/loading.svg')} />,
-// });
+const Lazy = withLazyimg({
+  placeholder: <Placeholder img={Loading} />,
+  threshold:0.98
+});
 class Example extends Component {
   render() {
     return (
@@ -24,9 +25,10 @@ class Example extends Component {
           <div className="example-img">
             <Lazyimg
               className="lazy"
-              src='http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'
+              src={getImg().default}
               width="100%"
               height="100%"
+              threshold={1}
             />
           </div>
 
@@ -45,10 +47,11 @@ class Example extends Component {
         <div className="example-wp">
           <Title title={`使用 "LazyimgWrapper" 开启渐进性过渡效果`} className="sub" />
           <div className="example-img">
-            <LazyimgWrapper>
+            <LazyimgWrapper style={{height: "100%", width: "100%"}}>
               <Lazyimg 
                 className="lazy"
-                src={'http://zhansingsong.github.io/lazyimg/bg9.b4fca14f.jpg'}
+                src={getImg().default}
+                threshold={0.98}
               />
             </LazyimgWrapper>
           </div>
@@ -68,75 +71,79 @@ class Example extends Component {
 
         {/* -------------------- 分割线 --------------------- */}
         <div className="example-wp">
-          <Title title="个性定制" className="sub" />
+          <Title title="使用 withLazying 配置 react 组件式 placeholder" className="sub" />
           <div className="example-img">
-            {/* <Lazy1
-              className="lazy"
-              src={getImg()}
-              js_effect="transition.flipXIn"
-            /> */}
+          <LazyimgWrapper style={{height: "100%", width: "100%"}}>
+              <Lazy 
+                className="lazy"
+                src={getImg().default}
+              />
+            </LazyimgWrapper>
           </div>
           <I>
             提示：这里是基于<strong className="strong">config 配置实例</strong>来做定制。现实不同的动画效果。
           </I>
           <Prism>
             {`
-  <Lazy
-    className="lazy"
-    js_effect="transition.flipXIn" // 定制不同的动画效果
-    src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
-  />;
+  import Lazyimg, { LazyimgWrapper, withLazyimg } from 'react-lazyimg-component';
+  // 使用 withLazyimg 配置
+  const Lazy = withLazyimg({
+    placeholder: <Placeholder img={Loading} />,
+    threshold:0.98
+  });
+  <LazyimgWrapper style={{height: "100%", width: "100%"}}>
+    <Lazy 
+      className="lazy"
+      src={'http://zhansingsong.github.io/lazyimg/bg9.b4fca14f.jpg'}
+    />
+  </LazyimgWrapper>
             `}
           </Prism>
         </div>
         {/* -------------------- 分割线 --------------------- */}
         <div className="example-wp">
-          <Title title="js-effect 动画效果" className="sub" />
+          <Title title="animate.css 动画效果" className="sub" />
           <div className="example-img">
-            {/* <Lazy1
-              className="lazy"
-              src={getImg()}
-              js_effect="transition.shrinkIn"
-            /> */}
+          <LazyimgWrapper style={{height: "100%", width: "100%"}}>
+              <Lazy 
+                animateType="animation"
+                animateClassName={["animated","slideOutDown"]}
+                className="lazy"
+                src={getImg().default}
+              />
+            </LazyimgWrapper>
           </div>
           <I className="i-error">
-            注意：<strong className="strong">js-effect</strong>依赖于<a
+            注意：这里 <strong className="strong">"animation"</strong> 依赖于<a
               className="link"
-              href="https://github.com/julianshapiro/velocity"
+              href="https://github.com/daneden/animate.css"
               target="blank"
             >
-              velocity.js
-            </a>。需要确保<a
-              className="link"
-              href="https://github.com/julianshapiro/velocity"
-              target="blank"
-            >
-              velocity.js
-            </a>已加载。
+              animate.css
+            </a>， 并且使用的是 <strong className="strong">出动画（如 "slideOutDown"）</strong>，因为使用了 "LazyimgWrapper" 
           </I>
           <Prism>
             {`
-  // 引入 lazyimg
-  import Lazyimg, { withLazyimg } from 'react-lazyimg-component';
-  // 引入 volecity.js。如果没有安装需要先安装：npm install velocity-animate
-  import 'velocity-animate';
-  import 'velocity-animate/velocity.ui';
-  // 配置
-  const config = {
-    js_effect: 'transition.shrinkIn', // 支持 velocity.js 动画效果
-  };
-  const Lazy = withLazyimg(config);
-  // 调用
-  <Lazy
-    className="lazy"
-    src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
-  />;
+  import Lazyimg, { LazyimgWrapper, withLazyimg } from 'react-lazyimg-component';
+  // 使用 withLazyimg 配置
+  const Lazy = withLazyimg({
+    placeholder: <Placeholder img={Loading} />,
+    threshold:0.98
+  });
+  <LazyimgWrapper style={{height: "100%", width: "100%"}}>
+    <Lazy 
+      animateType="animation"
+      animateClassName={["animated","slideOutDown"]}
+      className="lazy"
+      src={'http://zhansingsong.github.io/lazyimg/bg9.b4fca14f.jpg'}
+    />
+  </LazyimgWrapper>
             `}
           </Prism>
         </div>
         {/* -------------------- 分割线 --------------------- */}
         <div className="example-wp">
-          <Title title="css-effect 动画效果" className="sub" />
+          <Title title="动画效果" className="sub" />
           <div className="example-img">
             {/* <Lazy1
               className="lazy"

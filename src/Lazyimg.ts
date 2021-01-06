@@ -26,8 +26,6 @@ export interface ILazyimgProps {
   loaded?: (el?: HTMLElement) => void;
   // 动画执行完完 hook 回调
   end?: (el?: HTMLElement) => void;
-  // 用于开启自然动画过渡效果。由 LazyimgWrapper 组件自动传递
-  isLazyimgWrapper?: boolean;
   // 过渡动画类型
   animateType?: 'none' | 'transition' | 'animation';
   // 动画作用类名
@@ -47,28 +45,44 @@ export interface ILazyimgProps {
 interface ILazyimgType extends Omit<HTMLProps<HTMLElement>, 'placeholder'>, ILazyimgProps {
   src: string;
   srcSet?: string;
+  // 用于开启自然动画过渡效果。由 LazyimgWrapper 组件自动传递
+  isLazyimgWrapper?: boolean;
 }
-
+export const withLazyimg:(config?: ILazyimgProps) => FC<ILazyimgType> = (config={}) => {
 const Lazyimg: FC<ILazyimgType> = (props) => {
+  const defaults = {
+    force: false,
+    element: 'img',
+    placeholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC',
+    animateType: 'transition',
+    isLazyimgWrapper: false,
+    timeout: 300,
+    root: null,
+    rootMargin: '0px',
+    threshold: 0,
+    loaded: () => {},
+    end: () => {},
+  }
+  const finalProps = {...defaults, ...config, ...props};
   let {
-    force = false,
-    element = 'img',
-    placeholder = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC',
-    animateType = 'transition',
+    force,
+    element,
+    placeholder,
+    animateType,
     animateClassName,
-    isLazyimgWrapper = false,
-    timeout = 300,
+    isLazyimgWrapper,
+    timeout,
     parent,
     src,
     srcSet,
-    root = null,
-    rootMargin = '0px',
-    threshold = 0,
+    root,
+    rootMargin,
+    threshold,
     children,
     loaded = () => {},
     end = () => {},
     ...restProps
-  } = props;
+  } = finalProps;
 
   type ContextType = {
     isLoaded: boolean;
@@ -242,10 +256,13 @@ const Lazyimg: FC<ILazyimgType> = (props) => {
         height: LazyimgProps.height ? LazyimgProps.height : undefined,
         width: LazyimgProps.width ? LazyimgProps.width : undefined,
       } as CSSProperties;
-      currentReactElement.current = cloneElement(placeholder as ReactElement, {
+      // 因为无法确保获取 placeholder 组件 ref，所以需要构建 'div' 包裹
+      currentReactElement.current = createElement('div', {
         ...LazyimgProps,
-        style: { ...style, ...(placeholder as ReactElement).props.style },
-      });
+        style: { ...style, ...(placeholder as ReactElement).props.wrapperStyle },
+      }, cloneElement(placeholder as ReactElement))
+      console.log('currentReactElement.current--->', currentReactElement.current)
+
       // return cloneElement(placeholder as ReactElement, {...LazyimgProps, style: { ...style, ...(placeholder as ReactElement).props.style } });
     } else {
       if (element === 'img') {
@@ -263,16 +280,20 @@ const Lazyimg: FC<ILazyimgType> = (props) => {
   return currentReactElement.current;
 };
 
+
+  return Lazyimg;
+}
+
 export const LazyimgWrapper: FC<
   HTMLProps<HTMLElement> & {
     element?: string;
   }
-> = ({ element = 'div', children, ...restProps }) => {
+> = ({ element = 'div', children, style, ...restProps }) => {
   let cloneChildren = Children.only(children);
   if (!!children) {
     cloneChildren = cloneElement(cloneChildren as ReactElement, { isLazyimgWrapper: true });
   }
-  return createElement(element, { style: { position: 'relative' }, ...restProps }, cloneChildren);
+  return createElement(element, { style: { position: 'relative', ...style }, ...restProps }, cloneChildren);
 };
 
-export default Lazyimg;
+export default withLazyimg();
