@@ -20,7 +20,7 @@
 
 ![qrcode](./qrcode.png)
 
-## 特性 🌲
+## 特性 ⛳️
 
 - Typescript 静态类型检查，友好的代码提示与补全
 - React Hooks 实现
@@ -33,7 +33,7 @@
 - 支持动画效果作用于父级元素
 - 支持响应式图片( picture / srcset )
 
-## 安装
+## 安装 🚀
 
 ```bash
 // npm
@@ -266,7 +266,7 @@ import Lazyimg from 'react-lazyimg-component';
   </picture>
 ```
 
-## API
+## API 📚
 
 通过 `props` 来决定懒加载的行为，to use is super easy😎。
 
