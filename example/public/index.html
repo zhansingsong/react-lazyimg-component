@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,15 +22,152 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>react-lazyimg</title>
-    <link rel="stylesheet" href="./prism.css">
-    <script src="./prism.js"></script>
-    <script src="./flexible.js"></script>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>react-lazyimg</title>
+  <link rel="stylesheet" href="./prism.css">
+  <script src="./prism.js"></script>
+  <script src="./flexible.js"></script>
+</head>
+
+<body>
+  <style>
+    .github-fork-ribbon {
+      width: 12.1em;
+      height: 12.1em;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      right: 0;
+      z-index: 9999;
+      pointer-events: none;
+      font-size: 13px;
+      text-decoration: none;
+      text-indent: -999999px;
+    }
+
+    .github-fork-ribbon.fixed {
+      position: fixed;
+    }
+
+    .github-fork-ribbon:hover,
+    .github-fork-ribbon:active {
+      background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    .github-fork-ribbon:before,
+    .github-fork-ribbon:after {
+      /* The right and left classes determine the side we attach our banner to */
+      position: absolute;
+      display: block;
+      width: 15.38em;
+      height: 1.54em;
+
+      top: 3.23em;
+      right: -3.23em;
+
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    .github-fork-ribbon:before {
+      content: "";
+
+      /* Add a bit of padding to give some substance outside the "stitching" */
+      padding: .38em 0;
+
+      /* Set the base colour */
+      background-color: #a00;
+
+      /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)));
+      background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+      background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+      background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+      background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+
+      /* Add a drop shadow */
+      -webkit-box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+      box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+
+      pointer-events: auto;
+    }
+
+    .github-fork-ribbon:after {
+      /* Set the text from the data-ribbon attribute */
+      content: attr(data-ribbon);
+
+      /* Set the text properties */
+      color: #fff;
+      font: 700 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.54em;
+      text-decoration: none;
+      text-shadow: 0 -.08em rgba(0, 0, 0, 0.5);
+      text-align: center;
+      text-indent: 0;
+
+      /* Set the layout properties */
+      padding: .15em 0;
+      margin: .15em 0;
+
+      /* Add "stitching" effect */
+      border-width: .08em 0;
+      border-style: dotted;
+      border-color: #fff;
+      border-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .github-fork-ribbon.left-top,
+    .github-fork-ribbon.left-bottom {
+      right: auto;
+      left: 0;
+    }
+
+    .github-fork-ribbon.left-bottom,
+    .github-fork-ribbon.right-bottom {
+      top: auto;
+      bottom: 0;
+    }
+
+    .github-fork-ribbon.left-top:before,
+    .github-fork-ribbon.left-top:after,
+    .github-fork-ribbon.left-bottom:before,
+    .github-fork-ribbon.left-bottom:after {
+      right: auto;
+      left: -3.23em;
+    }
+
+    .github-fork-ribbon.left-bottom:before,
+    .github-fork-ribbon.left-bottom:after,
+    .github-fork-ribbon.right-bottom:before,
+    .github-fork-ribbon.right-bottom:after {
+      top: auto;
+      bottom: 3.23em;
+    }
+
+    .github-fork-ribbon.left-top:before,
+    .github-fork-ribbon.left-top:after,
+    .github-fork-ribbon.right-bottom:before,
+    .github-fork-ribbon.right-bottom:after {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  </style>
+  <a class="github-fork-ribbon" href="https://github.com/zhansingsong/react-lazyimg-component" data-ribbon="Star me on GitHub"
+    title="Star me on GitHub">Star me on GitHub</a>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -42,5 +177,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
