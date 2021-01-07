@@ -1,22 +1,17 @@
 {
   "name": "react-lazyimg-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a react component with typescript for lazy loading image",
   "main": "lib/Lazyimg.js",
-  "directories": {
-    "example": "example",
-    "lib": "lib"
-  },
   "files": [
     "src/**",
     "lib/**"
   ],
   "peerDependencies": {
-    "react": "^16.8.0"
+    "react": ">=16.8.0"
   },
   "dependencies": {
-    "intersection-observer": "^0.12.0",
-    "styled-components": "^5.2.1"
+    "intersection-observer": "^0.12.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
