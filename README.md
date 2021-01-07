@@ -14,11 +14,11 @@
 
 ### PC 预览：
 
-[:point_right: 猛击这里吧 :soon:](http://zhansingsong.github.io/lazyimg/)
+[:point_right: 猛击这里吧 :soon:](https://zhansingsong.github.io/lazyimg-v1/)
 
 ### 手机预览(扫一扫)：
 
-![qrcode](./qrcode.png)
+![qrcode](./qrcode-v1.png)
 
 ## 特性 ⛳️
 
