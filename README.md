@@ -20,7 +20,7 @@
 
 ![qrcode](./qrcode.png)
 
-## 特性
+## 特性 🌲
 
 - Typescript 静态类型检查，友好的代码提示与补全
 - React Hooks 实现
@@ -42,93 +42,85 @@ $> npm install react-lazyimg-component
 $> yarn add react-lazyimg-component
 ```
 
-## 使用
-
-### 默认配置：
+## 快速入门 🌴
 
 ```js
-// 引入 lazyimg
-import Lazyimg, {LazyimgWrapper} from 'react-lazyimg-component';
+// 引入 react-lazyimg-component
+import Lazyimg from 'react-lazyimg-component';
 // 调用
-<LazyimgWrapper>
-  <Lazyimg className="lazy" src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'} />
-</LazyimgWrapper>;
+<Lazyimg className="lazy" src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'} />;
 ```
+
+## 一些常用实例 🎯
 
 ### 使用 "LazyimgWrapper" 开启渐进性过渡效果
 
 ```js
-  // 引入 react-lazyimg-component
-  import Lazyimg, { LazyimgWrapper } from 'react-lazyimg-component';
-  <LazyimgWrapper>
-    <Lazyimg 
-      className="lazy"
-      src={'http://zhansingsong.github.io/lazyimg/bg9.b4fca14f.jpg'}
-    />
-  </LazyimgWrapper>
+// 引入 react-lazyimg-component
+import Lazyimg, {LazyimgWrapper} from 'react-lazyimg-component';
+<LazyimgWrapper>
+  <Lazyimg className="lazy" src={'http://zhansingsong.github.io/lazyimg/bg9.b4fca14f.jpg'} />
+</LazyimgWrapper>;
 ```
 
 ### placeholder 组件
 
 ```js
-  // 定义 placeholder 组件
-  import React from 'react';
-  import './style.scss';
-  export default props => {
-    let { className, text, img, children } = props;
-    return (
-      <div
-        className={['placeholder', className]
-          .filter(item => {
-            if (item) {
-              return item;
-            }
-          })
-          .join(' ')}
-      >
-      { img && <img src={img} className="placeholder-img" />}
-      { text && <span className="placeholder-text" >{children || text}</span> }
-      </div>
-    );
-  };
+// 定义 placeholder 组件
+import React from 'react';
+import './style.scss';
+export default (props) => {
+  let {className, text, img, children} = props;
+  return (
+    <div
+      className={['placeholder', className]
+        .filter((item) => {
+          if (item) {
+            return item;
+          }
+        })
+        .join(' ')}
+    >
+      {img && <img src={img} className="placeholder-img" />}
+      {text && <span className="placeholder-text">{children || text}</span>}
+    </div>
+  );
+};
 
-  // 引入 react-lazyimg-component
-  import Lazyimg from 'react-lazyimg-component';
-  // 引入 Placeholder
-  import Placeholder from './Placeholder';
-  // 引入 fire.svg
-  import Fire from './img/fire.svg';
+// 引入 react-lazyimg-component
+import Lazyimg from 'react-lazyimg-component';
+// 引入 Placeholder
+import Placeholder from './Placeholder';
+// 引入 fire.svg
+import Fire from './img/fire.svg';
 
-  <Lazyimg
-    placeholder={<Placeholder img={Fire} />}
-    animateType="animation"
-    animateClassName={['animated', 'rollIn']}
-    className="lazy"
-    timeout={1000}
-    src={'http://zhansingsong.github.io/lazyimg/bg9.b4fca14f.jpg'}
-  />
+<Lazyimg
+  placeholder={<Placeholder img={Fire} />}
+  animateType="animation"
+  animateClassName={['animated', 'rollIn']}
+  className="lazy"
+  timeout={1000}
+  src={'http://zhansingsong.github.io/lazyimg/bg9.b4fca14f.jpg'}
+/>;
 ```
 
 ### 使用 "withLazying" 配置 react 组件式 placeholder
 
 ```js
-  // 引入 react-lazyimg-component
-  import Lazyimg, { LazyimgWrapper, withLazyimg } from 'react-lazyimg-component';
-  // 引入 Placeholder
-  import Placeholder from './Placeholder';
-  // 引入 loading.svg
-  import Loading from './img/loading.svg';
-  // 使用 withLazyimg 配置
-  const Lazy = withLazyimg({
-    placeholder: <Placeholder img={Loading} />,
-    threshold:0.98,
-  });
-  <LazyimgWrapper style={{height: "100%", width: "100%"}}>
-    <Lazy 
-      className="lazy"
-      src={'http://zhansingsong.github.io/lazyimg/bg9.b4fca14f.jpg'}
-    />
-  </LazyimgWrapper>
+// 引入 react-lazyimg-component
+import Lazyimg, {LazyimgWrapper, withLazyimg} from 'react-lazyimg-component';
+// 引入 Placeholder
+import Placeholder from './Placeholder';
+// 引入 loading.svg
+import Loading from './img/loading.svg';
+// 使用 withLazyimg 配置
+const Lazy = withLazyimg({
+  placeholder: <Placeholder img={Loading} />,
+  threshold: 0.98,
+});
+<LazyimgWrapper style={{height: '100%', width: '100%'}}>
+  <Lazy className="lazy" src={'http://zhansingsong.github.io/lazyimg/bg9.b4fca14f.jpg'} />
+</LazyimgWrapper>;
 ```
 
 ### transition 动画效果
@@ -136,17 +128,18 @@ import Lazyimg, {LazyimgWrapper} from 'react-lazyimg-component';
 - 动画样式
 
   ```css
-    .transition-enter {
-      opacity: 0;
-      transform: scale(1.04);
-    }
+  .transition-enter {
+    opacity: 0;
+    transform: scale(1.04);
+  }
 
-    .transition-enter-active {
-      opacity: 1;
-      transform: scale(1);
-      transition: opacity 400ms, transform 400ms;
-    }
+  .transition-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 400ms, transform 400ms;
+  }
   ```
+
 - 组件
 
   ```js
@@ -159,79 +152,81 @@ import Lazyimg, {LazyimgWrapper} from 'react-lazyimg-component';
     className="lazy"
     timeout={400}
     src={'http://zhansingsong.github.io/lazyimg/bg9.b4fca14f.jpg'}
-  />
+  />;
   ```
-> singsong: 不要忘记指定 `timeout={400}` 😬
+
+> singsong: 这里 `"transition"` 使用的是 **进动画（不可见 ---> 可见）**。如果使用 `"LazyimgWrapper"`，就需要使用 **出动画（可见 ---> 不可见）**。同时不要忘记指定 `timeout={1000}` 😬
 
 ### animate.css 动画效果
 
 使用 [`animate.css`](https://github.com/daneden/animate.css) 样式动画库实现过渡效果。
 
 ```js
-  // 引入 react-lazyimg-component
-  import Lazyimg, { LazyimgWrapper, withLazyimg } from 'react-lazyimg-component';
-  // 引入 Placeholder
-  import Placeholder from '../Placeholder';
-  // 引入 loading.svg
-  import Loading from '../../img/loading.svg';
-  // 使用 withLazyimg 配置
-  const Lazy = withLazyimg({
-    placeholder: <Placeholder img={Loading} />,
-    threshold:0.98
-  });
-  <LazyimgWrapper style={{height: "100%", width: "100%"}}>
-    <Lazy 
-      animateType="animation"
-      animateClassName={["animated","slideOutDown"]}
-      timeout={1000}
-      className="lazy"
-      src={'http://zhansingsong.github.io/lazyimg/bg9.b4fca14f.jpg'}
-    />
-  </LazyimgWrapper>
+// 引入 react-lazyimg-component
+import Lazyimg, {LazyimgWrapper, withLazyimg} from 'react-lazyimg-component';
+// 引入 Placeholder
+import Placeholder from '../Placeholder';
+// 引入 loading.svg
+import Loading from '../../img/loading.svg';
+// 使用 withLazyimg 配置
+const Lazy = withLazyimg({
+  placeholder: <Placeholder img={Loading} />,
+  threshold: 0.98,
+});
+<LazyimgWrapper style={{height: '100%', width: '100%'}}>
+  <Lazy
+    animateType="animation"
+    animateClassName={['animated', 'slideOutDown']}
+    timeout={1000}
+    className="lazy"
+    src={'http://zhansingsong.github.io/lazyimg/bg9.b4fca14f.jpg'}
+  />
+</LazyimgWrapper>;
 ```
 
-> singsong: 不要忘记指定 `timeout={1000}` 😬
+> singsong：这里 `"animation"` 依赖于 [`animate.css`](https://github.com/daneden/animate.css)， 并且使用了 `"LazyimgWrapper"`，就需要使用 **出动画（可见 ---> 不可见）**，如 "slideOutDown"。同时需要指定 `timeout={1000}`
 
 ### 基于 `loaded` 钩子函数自定义动画效果
 
 ```js
-  // 引入 react-lazyimg-component
-  import Lazyimg from 'react-lazyimg-component';
-  // 调用
-  <Lazyimg
-    className="lazy"
-    src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
-    loaded={(el)=>{ // 自定义动画效果
-      window.Velocity(el, 'transition.whirlIn', { // 需要引入 Velocity 动画库
-        duration: 600,
-      });
-      // 避免执行默认动画逻辑
-      return true;
-    }}
-  />
+// 引入 react-lazyimg-component
+import Lazyimg from 'react-lazyimg-component';
+// 调用
+<Lazyimg
+  className="lazy"
+  src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
+  loaded={(el) => {
+    // 自定义动画效果
+    window.Velocity(el, 'transition.whirlIn', {
+      // 需要引入 Velocity 动画库
+      duration: 600,
+    });
+    // 避免执行默认动画逻辑
+    return true;
+  }}
+/>;
 ```
 
 ### 父级动画效果
 
 ```js
-  // 指定动画效果作用于该父级元素
-  <div className="example-wp">
-    <Title title="父级动画效果" className="sub" />
-    <div className="example-img">
-      <Lazyimg
-        className="lazy"
-        src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
-        animateType="animation"
-        animateClassName={['animated', 'flipInY']}
-        timeout={1000}
-        parent=".example-wp" // 指定父级元素选择器，也可以指定父级层级level：2
-      />
-    </div>
+// 指定动画效果作用于该父级元素
+<div className="example-wp">
+  <Title title="父级动画效果" className="sub" />
+  <div className="example-img">
+    <Lazyimg
+      className="lazy"
+      src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
+      animateType="animation"
+      animateClassName={['animated', 'flipInY']}
+      timeout={1000}
+      parent=".example-wp" // 指定父级元素选择器，也可以指定父级层级level：2
+    />
   </div>
+</div>
 ```
 
 > singsong：当图片元素加载完，动画效果会作用在指定的父级元素上。
-
 
 ### 响应式图片( picture / srcset )
 
@@ -341,10 +336,10 @@ import Lazyimg, {LazyimgWrapper} from 'react-lazyimg-component';
   - placeholder：占位元素，除了支持普通的图片外，还支持 react 组件。
 
 - **withLazyimg：定制 `Lazyimg` 组件的默认 `props`**。如使用 `withLazying` 配置 react 组件式 placeholder
-  
+
   ```js
-    // 引入 react-lazyimg-component
-  import Lazyimg, { LazyimgWrapper, withLazyimg } from 'react-lazyimg-component';
+  // 引入 react-lazyimg-component
+  import Lazyimg, {LazyimgWrapper, withLazyimg} from 'react-lazyimg-component';
   // 引入 Placeholder
   import Placeholder from './Placeholder';
   // 引入 loading.svg
@@ -352,14 +347,11 @@ import Lazyimg, {LazyimgWrapper} from 'react-lazyimg-component';
   // 使用 withLazyimg 配置
   const Lazy = withLazyimg({
     placeholder: <Placeholder img={Loading} />,
-    threshold:0.98,
+    threshold: 0.98,
   });
-  <LazyimgWrapper style={{height: "100%", width: "100%"}}>
-    <Lazy 
-      className="lazy"
-      src={'http://zhansingsong.github.io/lazyimg/bg9.b4fca14f.jpg'}
-    />
-  </LazyimgWrapper>
+  <LazyimgWrapper style={{height: '100%', width: '100%'}}>
+    <Lazy className="lazy" src={'http://zhansingsong.github.io/lazyimg/bg9.b4fca14f.jpg'} />
+  </LazyimgWrapper>;
   ```
 
 - **LazyimgWrapper：包裹组件，用于包裹 `Lazyimg` 组件，方便构建渐进性自然过渡效果。**
