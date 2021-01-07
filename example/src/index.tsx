@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import './styles/index.scss';
 import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
+import 'velocity-animate';
+import 'velocity-animate/velocity.ui';
 
 ReactDOM.render(
   <React.StrictMode>

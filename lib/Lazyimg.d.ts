@@ -4,7 +4,7 @@ export declare const ID: string;
 export interface ILazyimgProps {
     element?: string;
     force?: boolean;
-    loaded?: (el?: HTMLElement) => void;
+    loaded?: (el?: HTMLElement) => void | boolean;
     end?: (el?: HTMLElement) => void;
     animateType?: 'none' | 'transition' | 'animation';
     animateClassName?: string[];

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './style.scss';
 import Title from '../Title';
+import AN from '../../lazyimg.png'
 // import Prism from '../Prism';
 class Header extends Component {
   render() {
@@ -30,8 +31,9 @@ class Header extends Component {
             <a href="https://reactcommunity.org//switch-transition" target="blank" className="link link-a">
             React Transition Group 的 SwitchTransition 
             </a> 动画实现原理
-            ，引入全新的渐进性自然过渡效果。
+            ，引入全新的渐进性自然过渡效果(如下图 <strong>方案 B</strong> 所示）。
           </p>
+          <img className="header-img" src={AN} />
           <Title title="特征" className="htt" />
           <ul className="header-list">
             <li>Typescript 静态类型检查，友好的代码提示与补全</li>

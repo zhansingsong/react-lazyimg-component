@@ -20,6 +20,17 @@
     @extend %u-center;
     padding: p2m(20);
   }
+  .key{
+    color: #1E88E5;
+  }
+  .code{
+    background: #EEEEEE;
+    border: 1px solid #9E9E9E;
+    padding: 0.2em 0.6em;
+    color: #444c49;
+    border-radius: 0.2em;
+    margin: 0 0.4em;
+  }
   pre[class*='language-'] {
     background-color: #272822;
     padding: 0em;
@@ -38,4 +49,15 @@
       height: 100%;
     }
   }
+}
+
+.transition-enter {
+  opacity: 0;
+  transform: scale(1.04);
+}
+
+.transition-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 400ms, transform 400ms;
 }

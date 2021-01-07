@@ -23,7 +23,7 @@ export interface ILazyimgProps {
   // 为 `true` 时，直接替换 src，不使用懒加载行为
   force?: boolean;
   // 在图片加载好替换前 hook 回调
-  loaded?: (el?: HTMLElement) => void;
+  loaded?: (el?: HTMLElement) => void | boolean;
   // 动画执行完完 hook 回调
   end?: (el?: HTMLElement) => void;
   // 过渡动画类型
@@ -147,7 +147,10 @@ const Lazyimg: FC<ILazyimgType> = (props) => {
     }
     if (contextRef.current.isLoaded) {
       if (typeof loaded === 'function') {
-        loaded(elementRef.current);
+        const isSkip = loaded(elementRef.current);
+        if(isSkip){
+          return;
+        }
       }
 
       let animateElement: HTMLElement = elementRef.current;
@@ -162,7 +165,6 @@ const Lazyimg: FC<ILazyimgType> = (props) => {
           } else {
             animateElement = parents(elementRef.current, parent) || elementRef.current;
           }
-          console.log(parent);
         }
       }
       animateType !== 'none' && animate(animateType, animateElement, animateClassName!, timeout, end);
@@ -261,7 +263,6 @@ const Lazyimg: FC<ILazyimgType> = (props) => {
         ...LazyimgProps,
         style: { ...style, ...(placeholder as ReactElement).props.wrapperStyle },
       }, cloneElement(placeholder as ReactElement))
-      console.log('currentReactElement.current--->', currentReactElement.current)
 
       // return cloneElement(placeholder as ReactElement, {...LazyimgProps, style: { ...style, ...(placeholder as ReactElement).props.style } });
     } else {

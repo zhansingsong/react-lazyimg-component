@@ -2,7 +2,6 @@ import React from 'react';
 import './style.scss';
 export default props => {
   let { className, text, img, ...rest } = props;
-  console.log(props.ref, 'props.ref');
   return (
     <div
       className={['placeholder', className]

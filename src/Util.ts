@@ -60,7 +60,6 @@ export function animate(
   const event = whichEvent[type as AnimateType];
   const addEventListener = () => {
     const detach = () => {
-      console.log(element, 'de')
       element.classList.remove(...animateClassName);
       endCallback(element);
     };
