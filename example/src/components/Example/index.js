@@ -252,7 +252,7 @@ class Example extends Component {
 
         {/* ------------------------------------- 分割线 ----------------------------------- */}
         <div className="example-wp">
-          <Title title="基于load钩子函数自定义动画效果" className="sub" />
+          <Title title="基于 loaded 钩子函数自定义动画效果" className="sub" />
           <div className="example-img">
             <Lazyimg
               className="lazy"
@@ -288,7 +288,7 @@ class Example extends Component {
     className="lazy"
     src={'http://zhansingsong.github.io/lazyimg/22.4582fc71.jpg'}
     loaded={(el)=>{ // 自定义动画效果
-      window.Velocity(el, 'transition.whirlIn', {
+      window.Velocity(el, 'transition.whirlIn', { // 需要引入 Velocity 动画库
         duration: 600,
       });
       // 避免执行默认动画逻辑
