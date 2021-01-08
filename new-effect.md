@@ -1,6 +1,6 @@
 # 这种 React 渐进过渡效果怎么样
 
-新项目中，使用 [Typescript](https://www.typescriptlang.org/) + [React(Hooks)](https://zh-hans.reactjs.org/docs/hooks-reference.html) 进行开发。项目需要使用**图片懒加载功能**，就对之前封装的 [react-lazyimg-component(v0.0.2)](https://github.com/zhansingsong/react-lazyimg-component/tree/v0.0.2) 组件进行重构。在保持原有功能基础上，做了一些优化，和改进。
+新项目中，使用 [Typescript](https://www.typescriptlang.org/) + [React(Hooks)](https://zh-hans.reactjs.org/docs/hooks-reference.html) 进行开发。项目需要使用**图片懒加载功能**，就对之前封装的 [react-lazyimg-component(v0.0.2)](https://github.com/zhansingsong/react-lazyimg-component/tree/v0.0.2) 组件进行重构。在保持原有功能基础上，做了一些优化，和改进。**[react-lazyimg-component(v1.0.0)](https://github.com/zhansingsong/react-lazyimg-component)**：
 
 - **Typescript** 静态类型检查，代码提示与补全更加完善
 - **React Hooks** 实现
@@ -57,11 +57,10 @@ const Lazy = withLazyimg({
 </LazyimgWrapper>;
 ```
 
-为了在 img 图片下载好更新组件时，控制 placeholder 与 img 的叠加遮挡。**react-lazyimg-component** 组件提供了 `LazyimgWrapper` 容器组件。
+在 img 图片下载好更新组件时，为了方便控制 placeholder 与 img 的叠加遮挡方式。**react-lazyimg-component** 组件还提供了 `LazyimgWrapper` 容器组件。
 
-> 为什么要单独提出一个 `LazyimgWrapper`
-
-> - 方便自定义容器样式
+> 为什么要单独提出一个 `LazyimgWrapper` 组件
+> - 方便自定义容器组件样式
 > - 通知 `Lazyimg` 组件开启 “渐进性自然过渡效果”
 
 
@@ -70,4 +69,4 @@ const Lazy = withLazyimg({
 ## 结束语
 
 重构后 [react-lazyimg-component(v1.0.0)](https://github.com/zhansingsong/react-lazyimg-component)
-组件不仅支持 **方案 A**，也支持 **方案 B**。这里介绍 **方案 B**，并不代表它优于 **方案 A**。只有针对不同的使用场景，二者谁最更合适。这里与大家分享 **方案 B**，方便大家在使用时多一种选择。
+组件不仅支持 **方案 A**，也支持 **方案 B**。这里介绍 **方案 B**，并不代表它优于 **方案 A**。只有针对不同的使用场景，二者谁最更合适。这里与大家分享 **方案 B**，方便大家在使用时多一种选择🎨。
