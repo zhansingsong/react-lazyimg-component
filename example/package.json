@@ -79,7 +79,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "cp": "PUBLIC_URL=/lazyimg-v1 npm run build && cp -r /Users/apple/github/react-lazyimg-component/example/build/ /Users/apple/github/zhansingsong.github.io/lazyimg-v1"
+    "cp": "PUBLIC_URL=/lazyimg-v1 npm run build && cp -r ${HOME}/github/react-lazyimg-component/example/build/ ${HOME}/github/zhansingsong.github.io/lazyimg-v1"
   },
   "eslintConfig": {
     "extends": [
