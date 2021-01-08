@@ -16,7 +16,7 @@
 
 其中 **“默认开启全新的渐进性自然过渡效果”** 功能中的 **渐进性自然过渡效果** 就是本文主要介绍内容。实现原理如下图 **【方案 B】** 所示：
 
-![](./images/v1/lazyimg-v1.png)
+![](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/v1/lazyimg-v1.png)
 
 - **方案 A**：[react-lazyimg-component(v0.0.2)](https://github.com/zhansingsong/react-lazyimg-component/tree/v0.0.2) 版本默认使用的过渡动画效果。该方案存在一个问题：“在 img 图片下载好组件更新完，便对 img 图片使用 **淡入动画效果**。在某些动画效果下会存在 **跳闪现象**（如 fade 效果）”。因为过渡过程：
 
@@ -28,7 +28,7 @@
 
 ### 对比效果图
 
-![](./images/v1/lazyimg.gif)
+![](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/v1/lazyimg.gif)
 
 > singsong: Demo 中第一张图片 **未使用** “渐进性自然过渡效果”，会存在跳闪现象。第二张图片 **使用** “渐进性自然过渡效果”，效果更加自然！😀
 
@@ -65,9 +65,9 @@ const Lazy = withLazyimg({
 > - 通知 `Lazyimg` 组件开启 “渐进性自然过渡效果”
 
 
-![](./images/v1/animation.gif)
+![](https://raw.githubusercontent.com/zhansingsong/react-lazyimg-component/master/images/v1/animation.gif)
 
 ## 结束语
 
 重构后 [react-lazyimg-component(v1.0.0)](https://github.com/zhansingsong/react-lazyimg-component)
-组件不仅支持 **方案 A**，也支持 **方案 B**。这里介绍 **方案 B**，并不代表它优于 **方案 A**。只有针对不同的使用场景，二者谁最更合适。这里与大家分享 **方案 B**，在使用时多一个选择。
+组件不仅支持 **方案 A**，也支持 **方案 B**。这里介绍 **方案 B**，并不代表它优于 **方案 A**。只有针对不同的使用场景，二者谁最更合适。这里与大家分享 **方案 B**，方便大家在使用时多一种选择。
