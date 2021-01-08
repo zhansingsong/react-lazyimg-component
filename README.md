@@ -2,15 +2,15 @@
 
 **react-lazyimg-component v1.0.0** 是使用 [Typescript](https://www.typescriptlang.org/)、[React Hooks](https://zh-hans.reactjs.org/docs/hooks-reference.html)、[Intersection Observer API](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API)完全重构的，React 图片懒加载小组件。并且组件参考了[React Transition Group 的 SwitchTransition](https://reactcommunity.org//switch-transition) 动画实现原理 ，引入全新的渐进性自然过渡效果（如下图 **方案 B** 所示）。
 
-![](./lazyimg.png)
+![](./images/v1/lazyimg-v1.png)
 
 **Demo 效果**
 
-![](./lazyimg.gif)
+![](./images/v1/lazyimg.gif)
 
 > singsong: Demo 中第一张图片未使用 **渐进性自然过渡效果**，会存在跳闪现象。第二张图片使用 **渐进性自然过渡效果**。效果更加自然！😀
 
-![](./animationcss.gif)
+![](./images/v1/animation.gif)
 
 ### PC 预览：
 
@@ -18,20 +18,19 @@
 
 ### 手机预览(扫一扫)：
 
-![qrcode](./qrcode-v1.png)
+![qrcode](./images/v1/qrcode-v1.png)
 
 ## 特性 ⛳️
 
-- Typescript 静态类型检查，友好的代码提示与补全
-- React Hooks 实现
-- Intersection Observer API 取代 scroll 事件，代码更加简洁，性能更好。并且做了兼容处理
-- 兼容服务端渲染
-- 定制默认 `props`
-- 默认开启全新的渐进性自然过渡效果
-- 小巧轻便，简单易用，基本无学习成本
-- 支持 react 组件式 placeholder
+- **Typescript** 静态类型检查，代码提示与补全更加完善
+- **React Hooks** 实现
+- **Intersection Observer API** 取代 scroll 事件，代码更加简洁，性能更好。并且做了兼容处理。
+- 兼容服务端渲染 **SSR**
+- 定制组件的默认 `props`
+- 支持 React 组件式 **placeholder**
 - 支持动画效果作用于父级元素
-- 支持响应式图片( picture / srcset )
+- 支持响应式图片( **picture** / **srcset** )
+- 默认开启全新的渐进性自然过渡效果
 
 ## 安装 🚀
 

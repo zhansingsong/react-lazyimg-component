@@ -369,7 +369,7 @@ class Example extends Component {
               srcSet={`${getRImg()} 360w, ${getRImg()} 640w, ${getRImg()} 980w`}
               sizes="(max-width: 370px) 90vw, (max-width: 640px) 100vw,(max-width: 980px) 100vw, 1300"
               animateType="animation"
-              animateClassName={['animated', 'bounceIn']}
+              animateClassName={['animated', 'slideInUp']}
             />
           </div>
           <I className="i-desc">

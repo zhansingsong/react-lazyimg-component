@@ -13,7 +13,7 @@
 
 ### 手机预览(扫一扫)：
 
-![qrcode](./qrcode.png)
+![qrcode](./images/v1/qrcode.png)
 
 ## 特性
 

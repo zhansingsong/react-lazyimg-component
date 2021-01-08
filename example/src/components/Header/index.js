@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './style.scss';
 import Title from '../Title';
-import AN from '../../lazyimg.png'
+import AN from '../../lazyimg-v1.png'
 // import Prism from '../Prism';
 class Header extends Component {
   render() {
